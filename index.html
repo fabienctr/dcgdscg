@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livres DCG & DSCG</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #2d3748; /* Less dark background */
+            color: #e2e8f0; /* Light text */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #e2e8f0;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            background-color: #4a5568; /* Darker tab background */
+            border-radius: 8px;
+            padding: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .tab-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: transparent;
+            color: #e2e8f0;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .tab-button.active {
+            background-color: #6b7280; /* Active tab background */
+            color: #e2e8f0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .tab-button:hover:not(.active) {
+            background-color: #6b7280; /* Hover for inactive tabs */
+        }
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+            gap: 24px;
+            justify-items: center;
+        }
+        .book-card {
+            background-color: #4a5568; /* Card background */
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+            text-align: center;
+            width: 100%; /* Ensure cards take full width of grid column */
+            max-width: 220px; /* Max width for individual card */
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .book-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .book-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #e2e8f0;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .book-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .book-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Livres DCG & DSCG - 2025/2026</h1>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('dcg')">DCG</button>
+            <button class="tab-button" onclick="showTab('dscg')">DSCG</button>
+        </div>
+
+        <div id="dcg-content" class="tab-content">
+            <div class="book-grid">
+                <a href="https://urlr.me/ZABP3k" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static2.cyberlibris.com/books_upload/300pix/9782100871056.jpg" alt="DCG UE1: Fondamentaux du Droit">
+                    <h3>DCG UE1 - Fondamentaux du Droit - Édition 5</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88960348?searchterm=DCG%201" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782384641161.jpg" alt="DCG UE1: Fondamentaux du Droit">
+                    <h3>DCG UE1 - Fiches Fondamentaux du Droit - Corroy Ed.2</h3>
+                </a>
+                <a href="" target="" rel="noopener noreferrer" class="book-card">
+                    <img src="https://www.dunod.com/sites/default/files/styles/moyen_desktop/public/thumbnails/image/9782100876358-001-X.jpeg" alt="DCG UE2: Droit des Sociétés">
+                    <h3>DCG UE2 - Droit des Sociétés - Dunod 2025 2026 (bientot dispo)</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88960350/page/1?searchterm=Droit%20des%20soci%C3%A9t%C3%A9s" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782384641192.jpg" alt="DCG UE2: Droit des Sociétés">
+                    <h3>DCG UE2 - Fiches Droit des Sociétés - Corroy </h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88956040?searchterm=Droit%20des%20soci%C3%A9t%C3%A9s" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782297269490.jpg" alt="DCG UE2: Droit des Sociétés">
+                    <h3>DCG UE2 - Droit des Sociétés - Gualino Ed. 12</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88960264?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static2.cyberlibris.com/books_upload/300pix/9782100878765.jpg" alt="DCG UE3: Fiscalité">
+                    <h3>DCG UE11 - Contrôle de Gestion - Dunod Edition 2°</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88968602?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/UE11-25.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 11 - Contrôle de Gestion - Fontaine Picard 2025-2026</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88954803/page/1?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782297269377.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 11 - Contrôle de Gestion - Gualino Ed.12</h3>
+                </a>
+
+
+
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88955137?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782297269315.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 11 - Exercices Contrôle de Gestion - Gualino Ed.12</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88960364?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782384641369.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 11 - Fiches Contrôle de Gestion - Corroy </h3>
+                </a>
+                <a href="" target="" rel="noopener noreferrer" class="book-card">
+                    <img src="https://www.dunod.com/sites/default/files/styles/moyen_desktop/public/thumbnails/image/9782100876365-001-X.jpeg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 3 - Droit Social - Dunod 2025-2026 (bientôt dispo)</h3>
+                </a>
+
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88956041?searchterm=DCG%2011" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static2.cyberlibris.com/books_upload/300pix/9782297269407.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 3 - Droit Social - Gualino Ed.5</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88960352?searchterm=DCG%203" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static2.cyberlibris.com/books_upload/300pix/9782384641222.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 3 - Droit Social - Corroy Ed.6</h3>
+                </a>
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88958514?searchterm=DCG%207" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static2.cyberlibris.com/books_upload/300pix/9782100877096.jpg" alt="DCG UE4: Comptabilité">
+                    <h3>DCG UE 7 - Management - Dunod Édition 3</h3>
+                </a>
+            </div>
+        </div>
+
+        <div id="dscg-content" class="tab-content" style="display:none;">
+            <div class="book-grid">
+                <a href="https://univ-scholarvox-com.elgebar.univ-reunion.fr/reader/docid/88968895?searchterm=DSCG" target="_blank" rel="noopener noreferrer" class="book-card">
+                    <img src="https://static.scholarvis.io/books_upload/300pix/9782297269520.jpg" alt="DSCG UE1: Gestion Juridique, Fiscale et Sociale">
+                    <h3>DSCG UE1 - Gualino Gestion Juridique, Fiscale et Sociale 2025-2026</h3>
+                </a>
+
+         
+                <!-- Add more DSCG books here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Deactivate all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId + '-content').style.display = 'block';
+
+            // Activate the clicked button
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
