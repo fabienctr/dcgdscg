@@ -100,6 +100,88 @@
                 grid-template-columns: repeat(4, 1fr);
             }
         }
+
+        .predictions {
+            margin-top: 60px;
+        }
+        .predictions h2 {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .predictions .subtitle {
+            text-align: center;
+            color: #a0aec0;
+            margin-bottom: 28px;
+            font-size: 14px;
+        }
+        .pred-note {
+            background-color: #4a5568;
+            border-left: 4px solid #ecc94b;
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .tier-block {
+            margin-bottom: 32px;
+        }
+        .tier-block h3 {
+            font-size: 17px;
+            margin: 0 0 12px;
+            padding-left: 12px;
+            border-left: 4px solid var(--tier-color, #718096);
+        }
+        .tier1 { --tier-color: #f56565; }
+        .tier2 { --tier-color: #ed8936; }
+        .tier3 { --tier-color: #ecc94b; }
+        .tier4 { --tier-color: #a0aec0; }
+        table.pred-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #4a5568;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
+        .pred-table th, .pred-table td {
+            padding: 10px 14px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom: 1px solid #5a6578;
+            vertical-align: top;
+        }
+        .pred-table th {
+            background-color: #3a4556;
+            font-weight: 600;
+        }
+        .pred-table tr:last-child td {
+            border-bottom: none;
+        }
+        .pred-table .proba {
+            font-weight: 700;
+            white-space: nowrap;
+            color: var(--tier-color, #e2e8f0);
+        }
+        .pred-list {
+            background-color: #4a5568;
+            border-radius: 8px;
+            padding: 16px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .pred-list li {
+            margin-bottom: 6px;
+        }
+        .manual-block p {
+            font-size: 14px;
+            line-height: 1.6;
+            background-color: #4a5568;
+            border-radius: 8px;
+            padding: 14px 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -135,6 +217,159 @@
                 </a>
             </div>
         </div>
+
+        <section class="predictions">
+            <h2>🎯 Prédictions UE1 DSCG — Sujet 2026</h2>
+            <p class="subtitle">Estimation des thèmes probables, sujets à travailler en priorité et mapping du manuel Gualino</p>
+
+            <div class="pred-note">
+                ⚠️ Les probas ne s'additionnent pas à 100% : un sujet couvre 6-8 thèmes. Et le seul quasi-certain à 100%, c'est qu'il y aura du contrat, du fiscal, de la difficulté d'entreprise et du pénal sous une forme ou une autre.
+            </div>
+
+            <div class="tier-block tier1">
+                <h3>Tier 1 — Très probable (≥ 65%)</h3>
+                <table class="pred-table">
+                    <thead>
+                        <tr><th>Thème</th><th>Proba</th><th>Justification</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Droit des contrats (formation, exécution, sûretés)</td><td class="proba">85%</td><td>75% de base, absent 2025 → retour quasi mécanique</td></tr>
+                        <tr><td>Un dossier pénal (sanctions, délits)</td><td class="proba">75%</td><td>75% de base, présent presque chaque année</td></tr>
+                        <tr><td>Cession d'actions/parts sociales</td><td class="proba">70%</td><td>67% de base, un an sur deux minimum</td></tr>
+                        <tr><td>Procédures collectives</td><td class="proba">65%</td><td>67% de base ; tombé 2024+2025 mais c'est LE thème récurrent</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tier-block tier2">
+                <h3>Tier 2 — Probable (45-60%)</h3>
+                <table class="pred-table">
+                    <thead>
+                        <tr><th>Thème</th><th>Proba</th><th>Justification</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Plus/moins-values de cession</td><td class="proba">60%</td><td>58% de base, souvent couplé à la cession de titres</td></tr>
+                        <tr><td>Intégration fiscale / mère-fille</td><td class="proba">55%</td><td>33% de base mais gap de 4 ans + pilier du programme</td></tr>
+                        <tr><td>Cautionnement (réforme 2021)</td><td class="proba">50%</td><td>Sous-exploité depuis la réforme, dans la famille à 75%</td></tr>
+                        <tr><td>CAC</td><td class="proba">50%</td><td>67% de base mais tombé 2 ans de suite</td></tr>
+                        <tr><td>Un contrat spécial ≠ franchise (bail, vente, assurance)</td><td class="proba">50%</td><td>67% de base, le jury change juste d'angle</td></tr>
+                        <tr><td>Étude d'une clause</td><td class="proba">50%</td><td>58% de base, dernier 2024</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tier-block tier3">
+                <h3>Tier 3 — Possible (30-45%)</h3>
+                <table class="pred-table">
+                    <thead>
+                        <tr><th>Thème</th><th>Proba</th><th>Justification</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Apport partiel d'actif / scission</td><td class="proba">45%</td><td>Gap 7 ans, rotation des restructurations après fusion 2025</td></tr>
+                        <tr><td>Responsabilité des dirigeants</td><td class="proba">40%</td><td>42% de base, dernier 2024</td></tr>
+                        <tr><td>Nullités en droit des sociétés (ord. mars 2025)</td><td class="proba">40%</td><td>Actualité chaude — le jury a intégré la réforme des contrats dès 2016</td></tr>
+                        <tr><td>Pacte Dutreil / transmission</td><td class="proba">35%</td><td>Cycle ~5-6 ans, dernier 2020</td></tr>
+                        <tr><td>Redressement judiciaire</td><td class="proba">35%</td><td>Absent depuis 2019 (si dossier procédures collectives)</td></tr>
+                        <tr><td>ABS</td><td class="proba">30%</td><td>Classique pénal absent depuis longtemps</td></tr>
+                        <tr><td>Assemblées générales</td><td class="proba">30%</td><td>42% de base, dernier 2024</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tier-block tier4">
+                <h3>Tier 4 — Peu probable (≤ 25%)</h3>
+                <table class="pred-table">
+                    <thead>
+                        <tr><th>Thème</th><th>Proba</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Procédure d'alerte CAC</td><td class="proba">25%</td></tr>
+                        <tr><td>TVA</td><td class="proba">20%</td></tr>
+                        <tr><td>Classes de parties affectées</td><td class="proba">20%</td></tr>
+                        <tr><td>Fusion-absorption</td><td class="proba">15%</td></tr>
+                        <tr><td>Droit social / transfert contrats</td><td class="proba">15%</td></tr>
+                        <tr><td>Associations</td><td class="proba">10%</td></tr>
+                        <tr><td>Sauvegarde, franchise, revenus fonciers SCI</td><td class="proba">≤ 10%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tier-block">
+                <h3>📝 Quatuor à faire en conditions réelles (4h, sans doc), classé par rentabilité</h3>
+                <table class="pred-table">
+                    <thead>
+                        <tr><th>Ordre</th><th>Sujet</th><th>Ce que ça couvre de mon pronostic</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1️⃣</td><td>2019</td><td>Le jackpot : intégration fiscale + redressement/liquidation judiciaire + mise en demeure + pénal (banqueroute, abus de confiance) + régime de faveur. ~5 thèmes du Tier 1-2 en un seul sujet</td></tr>
+                        <tr><td>2️⃣</td><td>2020</td><td>Sûretés (garanties réelles/personnelles, hypothèque) + Pacte Dutreil + conciliation + procédure d'alerte CAC + clause d'inaliénabilité. Couvre quasi tous mes outsiders</td></tr>
+                        <tr><td>3️⃣</td><td>2022</td><td>Intégration fiscale + régime mère-fille + preuve/signature électronique + cession + plus-values + responsabilité dirigeant</td></tr>
+                        <tr><td>4️⃣</td><td>2024</td><td>Le style actuel du jury : garantie de passif, nantissement, pénal (blanchiment, non-révélation), IS/IR, insuffisance d'actif</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tier-block">
+                <h3>En complément, dossiers isolés (pas le sujet entier)</h3>
+                <ul class="pred-list">
+                    <li><strong>2017</strong> → dossier entreprise en difficulté (période suspecte, pouvoirs de l'administrateur) + dossier pénal (faux, complicité)</li>
+                    <li><strong>2014</strong> → dossier 3 apport partiel d'actif (le seul vrai cas d'APA avec 2019)</li>
+                    <li><strong>2015</strong> → dossier CAC (responsabilité + révélation + commissaire à la fusion, tout en un)</li>
+                    <li><strong>2021</strong> → dossier fiscal (sociétés transparentes, territorialité IS)</li>
+                </ul>
+            </div>
+
+            <div class="tier-block">
+                <h3>⚠️ Pièges sur les corrigés anciens — critique</h3>
+                <ul class="pred-list">
+                    <li><strong>2020, dossier sûretés</strong> : le corrigé est antérieur à la réforme des sûretés (ord. 15/09/2021). Refais-le avec le droit actuel (cautionnement : mention manuscrite supprimée, proportionnalité réformée art. 2300 C. civ.)</li>
+                    <li><strong>Sujets ≤ 2015 en droit des contrats</strong> : antérieurs à la réforme 2016 — méthodo OK, solutions à actualiser</li>
+                    <li><strong>Corrigés fiscaux anciens</strong> : taux IS obsolètes (33⅓% ou 28%) — recalcule tout à 25%</li>
+                </ul>
+            </div>
+
+            <div class="tier-block manual-block">
+                <h3>📘 Manuel (Gualino) mappé sur le pronostic</h3>
+                <h3 style="border:none;padding-left:0;font-size:15px;color:#f56565;">🔴 Priorité 1 — à maîtriser à fond (~cœur du sujet 2026)</h3>
+                <table class="pred-table" style="margin-bottom:20px;">
+                    <thead>
+                        <tr><th>Chapitre</th><th>Contenu</th><th>Lien pronostic</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Ch. 1 (p. 19)</td><td>Formation, validité, nullité, inexécution des contrats</td><td>85%</td></tr>
+                        <tr><td>Ch. 13 (p. 269)</td><td>Cautionnement, garantie 1ère demande, nantissement, gage, hypothèque</td><td>85% + 50%</td></tr>
+                        <tr><td>Ch. 3 (p. 73), surtout le III</td><td>Pénal des affaires : CAC/faits délictueux, blanchiment, ABS, faux, comptes infidèles</td><td>75% + 50% + 30%</td></tr>
+                        <tr><td>Ch. 17 (p. 313)</td><td>Entreprise en difficulté (toutes procédures)</td><td>65%</td></tr>
+                        <tr><td>Ch. 18 (p. 341)</td><td>Vente parts sociales + donation/Dutreil + fiscalité</td><td>70% + 60% + 35%</td></tr>
+                        <tr><td>Ch. 14 (p. 279), surtout le III</td><td>Intégration fiscale, mère-fille, cession titres de participation, groupe TVA</td><td>55% + 60%</td></tr>
+                        <tr><td>Ch. 16 (p. 299)</td><td>Fusions, APA, scissions, TUP</td><td>45% (focus APA/TUP, pas fusion)</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="border:none;padding-left:0;font-size:15px;color:#ed8936;">🟠 Priorité 2 — bien travailler</h3>
+                <table class="pred-table" style="margin-bottom:20px;">
+                    <thead>
+                        <tr><th>Chapitre</th><th>Contenu</th><th>Lien pronostic</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Ch. 2 (p. 49)</td><td>Contrats spéciaux : vente, entreprise, assurance, transaction</td><td>50%</td></tr>
+                        <tr><td>Ch. 12 (p. 257), surtout III-IV</td><td>Pactes d'associés, clauses d'entrée/sortie du capital</td><td>50% (étude de clause)</td></tr>
+                        <tr><td>Ch. 8 (p. 201)</td><td>Pouvoirs et responsabilité des dirigeants, révocation</td><td>40% + 30%</td></tr>
+                        <tr><td>Ch. 7 (p. 185)</td><td>Constitution/transformation — vérifie qu'il intègre la réforme des nullités 2025</td><td>40%</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 style="border:none;padding-left:0;font-size:15px;color:#48bb78;">🟢 Priorité 3 — lecture active suffit</h3>
+                <p>Ch. 10 (territorialité, tombé 2021), Ch. 15 (GIE, location-gérance), Ch. 19 (dissolution, tombée 2024), Ch. 6 ⚠️ court mais jamais tombé et nouveau au programme (rapport de durabilité, plan de vigilance) — outsider d'actualité à ne pas zapper.</p>
+
+                <h3 style="border:none;padding-left:0;font-size:15px;color:#a0aec0;margin-top:20px;">⚪ Survol rapide</h3>
+                <p>Ch. 4 (concurrence, tombé 2025 via rupture brutale), Ch. 5 (contrôle fiscal, tombé 2025), Ch. 9 (numérique, tombé 2022), Ch. 11, Ch. 20-21 (associations, tombées 2023).</p>
+            </div>
+
+            <div class="pred-note">
+                En volume : 7 chapitres en priorité 1 ≈ 60% de ton temps de révision, et ils couvrent l'essentiel des points du sujet quasiment chaque année.
+            </div>
+        </section>
     </div>
 </body>
 </html>
